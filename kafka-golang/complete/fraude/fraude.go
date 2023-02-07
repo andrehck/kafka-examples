@@ -11,7 +11,6 @@ import (
 )
 
 func Fraude(wg1 sync.WaitGroup) {
-	defer wg1.Done()
 	c, err := kafka.NewConsumer(&kafka.ConfigMap{
 		"bootstrap.servers": "127.0.0.1:9092",
 		"group.id":          "FraudeConsumer",
